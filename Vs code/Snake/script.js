@@ -17,7 +17,7 @@ window.onload = function () {
     setInterval(jogo, 100);
     //controles
     document.addEventListener("keydown", function (e) {
-      switch (e.keyCode) {
+      switch (e.keyEvent) {
         //stea direita keydown 39
         case 39:
           velX = 1;
@@ -31,14 +31,14 @@ window.onload = function () {
         //stea direita keydown 39
   
         case 38:
-          velX = -1;
-          velY = 0;
+          velX = 0;
+          velY = 1;
           break;
         //stea direita keydown 39
   
         case 40:
-          velX = 1;
-          velY = 0;
+          velX = 0;
+          velY = -1;
           break;
       }
     });

@@ -5,7 +5,6 @@ var ctx = canvas.getContext("2d");
 
 var bird = new Image();
 bird.src = "images/bird.png";
-
 var bg = new Image();
 bg.src = "images/bg.png";
 var chao = new Image();
@@ -67,9 +66,9 @@ function jogo() {
       });
     }
     //passaros passando entre as bordas dos canos
-    if(bX + bird.width >= cano[i].x && bX <= cano[i].x + canocima.width &&
+    if(bX + bird.width >= cano[i].x && bX <= cano[i].x + canocima.width 
         //passaro colidiu com o cano de cima e de baixo
-        (bY <= cano[i].y + canocima.height ||
+        && (bY <= cano[i].y + canocima.height ||
           bY + bird.height >= cano[i].y + constant) ||
       bY + bird.height >= canvas.height - chao.height)
      {
@@ -95,6 +94,7 @@ function jogo() {
   ctx.fillStyle = "#000";
   ctx.font = "20px Arial";
   ctx.fillText("Placar: " + score, 10, canvas.height - 20);
-  requestAnimationFrame(jogo);
+
+    requestAnimationFrame(jogo);
 }
 jogo();
