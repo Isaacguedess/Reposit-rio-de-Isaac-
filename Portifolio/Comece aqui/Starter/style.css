@@ -27,3 +27,37 @@
 
     margin-left: -74px;
 }
+
+
+/* cada card com 280px de altura e apontador como seta do mouse */
+.servicesText.card {
+    height: 280px;
+    cursor: pointer;
+  }
+
+/* ícones com tamanho 36px e alinhados ao centro */
+.servicesIcon {
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
+}
+
+/* título dos cards ao centro */
+.card-title {
+    text-align: center;
+}
+
+/* ao serem selecionados, os ícones cards mudam de cor */
+.card:hover .servicesIcon {
+    color: purple;
+}
+
+/* ao ser selecionado, o card terá borda colorida */
+.servicesText:hover {
+    border: 2px solid purple;
+}
+
+
+.navbarScroll.navbarDark{
+        background-color: black;
+}
